@@ -1,0 +1,27 @@
+
+<p> Skills: </p>
+<div class="row">
+	<div *ngFor= "let skill of skills" class = flip-box>
+		<div class = flip-box-inner>
+
+			<div class = flip-box-front>
+				<p style="padding: 20% 0;"> {{skill.name}} </p>
+			</div>
+			<div class = flip-box-back>
+				<img class = flip-image src={{skill.image}}>
+
+				<a href={{skill.link}} target="_blank"> Learn More </a>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--
+<div>
+	<ul>
+	<li style="max-width: 600px;" *ngFor= "let skill of skills" class="extend-card">
+		{{skill.name}}
+	</li>
+	</ul>
+</div>
+-->

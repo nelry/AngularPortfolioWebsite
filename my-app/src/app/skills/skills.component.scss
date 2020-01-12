@@ -1,0 +1,77 @@
+.flip-box{
+	background-color: transparent;
+	float: left;
+	width: 23%;
+	height: 200px;
+	margin: 1%;
+	perspective: 1000px;
+}
+
+.row:after{
+	content: "";
+	display: table;
+		clear: both;
+}
+
+.flip-box-inner{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner{
+	transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.flip-box-front{
+	background-color: #bbb;
+	color: black;
+}
+
+.flip-box-back{
+	background-color: dodgerblue;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	background-size: contain;
+	color: white;
+	transform: rotateY(180deg);
+}
+
+.flip-image{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	width: 85%; 
+	height: 85%;
+
+}
+
+/* responsive layout */
+@media screen and (max-width: 1200px){
+	.flip-box {
+		width: 31.3%;
+	}
+}
+@media screen and (max-width: 900px){
+	.flip-box {
+		width: 48%;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.flip-box {
+		width: 100%;
+	}
+}

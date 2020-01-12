@@ -1,0 +1,36 @@
+<div>
+	<mat-toolbar class="extend-toolbar">
+		<button mat-icon-button [matMenuTriggerFor]="menu">
+  			<mat-icon> menu </mat-icon>
+  		</button>
+  		<mat-menu #menu="matMenu">
+  			<button mat-menu-item routerLink="/home"> 
+  				<mat-icon> home </mat-icon>
+  				<span> Home </span>
+  			</button>
+  			<button mat-menu-item routerLink="/about"> 
+  				<mat-icon> assignment_ind </mat-icon>
+  				<span> About </span> 
+  			</button>
+  			<button mat-menu-item routerLink="/experience"> 
+          <mat-icon> work </mat-icon>
+  				<span> Experience </span> 
+  			</button>
+  			<button mat-menu-item routerLink="/projects"> 
+          <mat-icon> assignment </mat-icon>
+  				<span> Projects </span> 
+  			</button>
+  			<button mat-menu-item routerLink="/skills"> 
+  				<mat-icon> assessment </mat-icon>
+          <span> Skills </span> 
+  			</button>
+  			<button mat-menu-item routerLink="/education"> 
+  				<mat-icon> description </mat-icon>
+          <span> Education </span> 
+  			</button>
+  		</mat-menu>
+  		{{pageTitle}}
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</div>
+
