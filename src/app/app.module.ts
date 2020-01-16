@@ -16,6 +16,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EducationComponent } from './education/education.component';
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,
-    EducationComponent
+    EducationComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

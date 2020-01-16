@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router, NavigationEnd} from '@angular/router';
+import { paths } from './app-paths';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import {Router, NavigationEnd} from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	pageTitle = "Hello";
+	pageTitle = "Error";
 
 	constructor(private router: Router) { }
 
@@ -16,8 +17,14 @@ export class AppComponent {
 			if (event instanceof NavigationEnd) {
 				var title = ((<NavigationEnd>event).url).split("/");
 
-				this.pageTitle = title[1].toUpperCase();
-				if (this.pageTitle === ""){
+				if (Object.values(paths).includes(title[1])){
+					this.pageTitle = title[1].toUpperCase();
+				}
+				else {
+					this.pageTitle = "404";
+				}
+
+				if (title[1] === ""){
 					this.pageTitle = "HOME";
 				}
 			}
