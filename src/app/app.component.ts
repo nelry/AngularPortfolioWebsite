@@ -17,7 +17,9 @@ export class AppComponent {
 				var title = ((<NavigationEnd>event).url).split("/");
 
 				this.pageTitle = title[1].toUpperCase();
-
+				if (this.pageTitle === ""){
+					this.pageTitle = "HOME";
+				}
 			}
 		});
   	}
