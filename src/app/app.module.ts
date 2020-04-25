@@ -10,6 +10,8 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
@@ -46,6 +48,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     LayoutModule,
     HttpClientModule,
     AppRoutingModule,
+    NgbModule,
     FormsModule,
     ReactiveFormsModule
   ],

@@ -5,6 +5,19 @@
 	background-color: mat-color($code-challenge-primary);
 }
 
+.background-pic{
+	/*
+	background-image: url("../../assets/Apple_logo_black.svg");
+	*/
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	background-origin: content-box;
+	background-attachment: scroll;
+	height: 90vh;
+}
+
 .extend-form{
 	padding: 15px;
 	background-color: mat-color($code-challenge-accent);
@@ -18,4 +31,11 @@
 .extend-list{
 	padding: 15px;
 	background-color: mat-color($code-challenge-accent);
+}
+
+.carousel{
+	background-color: transparent;
+	align-items: center;
+	font-size: 60px;
+	padding-left: 15%;
 }
